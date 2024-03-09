@@ -1,0 +1,27 @@
+.navbar{
+    width: 100%;
+    background-color: #e2e1e1;
+}
+.navbar-container{
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-logo{
+    font-size: 30px;
+    font-weight: 700;
+    opacity: 0.6;
+    color: green;
+    text-decoration: none;
+}
+.navbar-items{
+    display: flex;
+    align-items: center;
+}
+.navbar-item{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}

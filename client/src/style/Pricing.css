@@ -1,0 +1,134 @@
+.pricing{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.prcing-container{
+    min-height: 60vh;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pricing-card{
+    margin-inline: 50px;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px  #0000004d;
+}
+.pricing-card a{
+    text-decoration: none;
+}
+.pricing-card-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: blue;
+}
+.pricing-price{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin-block: 20px;
+}
+.pricing-des{
+    font-weight: 700;
+    line-height: 2;
+    opacity: 0.8;
+}
+.pricing-button{
+    background-color: #613FE5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 40px;
+    transition: all .3s ease;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.qrcode{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+}
+.qrcode-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qrcode-card{
+    backdrop-filter: blur(30px);
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px 1px;
+}
+.qrcode-close{
+    color: #613FE5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 35px;
+}
+.qrcode-name{
+    text-align: center;
+    margin-block: 20px;
+}
+.qrcode-name > span{
+    color: #0088ff;
+}
+.qrcode-card > img{
+    width: 300px;
+}
+.qrcode-upi-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.qrcode-upiid{
+    text-align: center;
+}
+.upicopy{
+    background-color: #d5d5d5;
+}
+.qrcode-upi-card button{
+    cursor: pointer;
+}
+.pricing-image-load{
+    margin-block: 30px 10px;
+}
+
+/* Order */
+.pricing-form{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.pricing-file-card{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.pricing-file-card input{
+    cursor: pointer;
+}
+.pricing-form button{
+    padding: 8px;
+    background-color: #613FE5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
