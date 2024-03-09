@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import {PiCaretDoubleRightBold} from 'react-icons/pi'
 import '../style/Pricing.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { IoClose } from "react-icons/io5";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { FaRegCopy } from "react-icons/fa";
+import axios from 'axios';
 
 const Pricing = () => {
 
     const [qrmodel, setQrmodel] = useState(false);
     const [qrcode, setQrcode] = useState('');
     const [upicopy, setUpicopy] = useState(false);
-    const [orderbutton, setOrderbutton] = useState('Place Order')
+    const [orderbutton, setOrderbutton] = useState('Place Order');
+    const [payscreenshot, setPayscreenshot] = useState('');
+    const navigate = useNavigate();
 
 // Download image
     const handleImageDownload = async () => {
@@ -32,12 +35,31 @@ const Pricing = () => {
         setUpicopy(true);
     }
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            setPayscreenshot(reader.result);
+            console.log(reader.result)
+          };
+          reader.readAsDataURL(file);
+        }
+      };
+
 // Order
-    const handleOrder =()=>{
+    const handleOrder = async(e)=>{
+        e.preventDefault();
+        setOrderbutton('Uploading...')
         try {
-            
+            const {data} = await axios.post('/api/v1/order/create', {payscreenshot});
+            if(data.success){
+                await localStorage.setItem('order', JSON.stringify(data.order));
+                navigate('/order');
+            }
         } catch (error) {
-            
+            setOrderbutton('Place Order');
+            alert('Please Try Agian');
         }
     }
 
@@ -67,8 +89,11 @@ const Pricing = () => {
         
 {/* Order */}
         <form onSubmit={handleOrder} className="pricing-form">
+        <label className="pricing-file-upload">Upload Payment Screenshot</label>
             <div className="pricing-file-card">
                 <input type="file"
+                    onChange={handleImageChange}
+                    placeholder='Upload payscreen'
                     required/>
             </div>
             <button type='submit'>{orderbutton}</button>
