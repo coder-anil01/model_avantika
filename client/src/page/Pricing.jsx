@@ -6,6 +6,9 @@ import { IoClose } from "react-icons/io5";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { FaRegCopy } from "react-icons/fa";
 import axios from 'axios';
+import { useAuth } from '../context/AuthProvider';
+import LoginModel from '../component/LoginModel';
+import { toast } from 'react-toastify';
 
 const Pricing = () => {
 
@@ -14,7 +17,13 @@ const Pricing = () => {
     const [upicopy, setUpicopy] = useState(false);
     const [orderbutton, setOrderbutton] = useState('Place Order');
     const [payscreenshot, setPayscreenshot] = useState('');
+    const [loginModel, setLoginModel] = useState(false);
+    const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
+
+  const receiveDataFromChild = (data) => {
+    setLoginModel(data);
+  };
 
 // Download image
     const handleImageDownload = async () => {
@@ -41,7 +50,6 @@ const Pricing = () => {
           const reader = new FileReader();
           reader.onloadend = () => {
             setPayscreenshot(reader.result);
-            console.log(reader.result)
           };
           reader.readAsDataURL(file);
         }
@@ -50,16 +58,24 @@ const Pricing = () => {
 // Order
     const handleOrder = async(e)=>{
         e.preventDefault();
-        setOrderbutton('Uploading...')
+        if(!auth?.user?._id){
+            return setLoginModel(true);
+        }
+        setOrderbutton('Uploading...');
         try {
-            const {data} = await axios.post('/api/v1/order/create', {payscreenshot});
+            const {data} = await axios.post('/api/v1/order/create', {payscreenshot, userId:auth?.user?._id});
             if(data.success){
-                await localStorage.setItem('order', JSON.stringify(data.order));
+                const orderId = auth?.orderId;
+                orderId.push(data?.orderId);
+                console.log(orderId)
+                setAuth({ user: auth?.user, orderId })
+                localStorage.setItem('auth', JSON.stringify({ user: auth?.user, orderId }));
                 navigate('/order');
             }
         } catch (error) {
+            console.log(error)
             setOrderbutton('Place Order');
-            alert('Please Try Agian');
+            toast.info("Plese try again");
         }
     }
 
@@ -115,6 +131,9 @@ const Pricing = () => {
             </div>
         </div>
     </div>}
+
+{/* LOGIN */}
+    {loginModel && <LoginModel handleSend={receiveDataFromChild}/>}
     </>
   )
 }

@@ -6,6 +6,7 @@ import connectDb from './db.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import orderRoute from './routes/orderRoute.js'
+import userRoute from './routes/userRoute.js'
 
 dotenv.config();
 connectDb();
@@ -24,6 +25,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, "./client/dist")));
 
 app.use('/api/v1/order', orderRoute);
+app.use('/api/v1/user', userRoute);
 
 app.use('*', function(req, res){
     res.sendFile(path.join(__dirname, "./client/dist/index.html"))

@@ -10,7 +10,11 @@ const orderSchema = new mongoose.Schema({
     status:{
         type: String,
         default: 'Please Wait...',
-    }
+    },
+    userId:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user',
+    },
 },{timestamps:true});
 
 export default mongoose.model('order', orderSchema);

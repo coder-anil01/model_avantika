@@ -6,6 +6,8 @@ import Pricing from './page/Pricing';
 import Order from './page/Order';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import AdminRoute from './page/admin/AdminRoute';
+import Orders from './page/admin/Orders';
 
 const App = () => {
   return (
@@ -19,6 +21,11 @@ const App = () => {
         <Route path='/' element={<Homepage />}/>
         <Route path='/pricing' element={<Pricing />}/>
         <Route path='/order' element={<Order />}/>
+
+{/* ADMIN */}
+        <Route path='/admin' element={<AdminRoute />}>
+          <Route path='' element={<Orders />}/>
+        </Route>
       </Routes>
     </Router>
       

@@ -1,0 +1,47 @@
+.login{
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.login-close{
+    color: blue;
+    font-size: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+.login h2{
+    text-align: center;
+    color: blue;
+}
+.login-container{}
+.login-form-items{
+    margin-block: 20px;
+}
+.login-form-icon{
+    margin-block: 5px;
+    font-size: 15px;
+}
+.login-form-input{
+    width: 250px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+.login-container button{
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-block: 20px 0;
+}
