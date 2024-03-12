@@ -1,5 +1,6 @@
 .home{
     width: 100%;
+    /* background-image: linear-gradient(to left, #ffc0cbb9, #00800058); */
 }
 .home-container{
     min-height: 93vh;
@@ -10,7 +11,7 @@
 }
 .home-left{}
 .home-left > h1{
-    color: #613FE5;
+    color: green;
 }
 .home-left > h2{}
 .home-media-icons-card{
@@ -18,10 +19,10 @@
     align-items: center;
 }
 .home-media-icons{
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 30px;
     margin-right: 40px;
-    background-color: #613FE5;
+    background-color: green;
     color: white;
     padding: 8px 8px 5px 8px;
     border-radius: 50%;
@@ -31,10 +32,10 @@
 .home-book-button{
     border-radius: 5px;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     font-size: 16px;
     color: white;
-    background-color: #613FE5;
+    background-color: green;
     text-decoration: none;
     box-shadow: 1px 1px 4px black;
     cursor: pointer;
@@ -56,7 +57,7 @@
     margin-block: 40px 20px;
 }
 .homepage-heading span{
-    color: #613FE5;
+    color: green;
 }
 .gallary{
     width: 100%;
@@ -74,6 +75,7 @@
     border-radius: 5px;
     box-shadow: 1px 1px 6px #0000005b;
     transition: all 0.3s;
+    cursor: pointer;
 }
 .gallary-images:hover{
     box-shadow: 1px 1px 6px #000000bc;

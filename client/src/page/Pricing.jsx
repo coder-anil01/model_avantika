@@ -86,7 +86,7 @@ const Pricing = () => {
         <div className="prcing-container">
             <div className="pricing-card">
                 <div className="pricing-card-heading">One Time</div>
-                <div className="pricing-price">$ 199</div>
+                <div className="pricing-price"><span>₹499</span>₹149</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration calibration</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
@@ -95,7 +95,7 @@ const Pricing = () => {
 
             <div className="pricing-card">
                 <div className="pricing-card-heading">One Month</div>
-                <div className="pricing-price">$ 199</div>
+                <div className="pricing-price"><span>₹4999</span>₹1499</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration calibration</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>

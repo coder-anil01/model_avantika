@@ -21,7 +21,7 @@ const Homepage = () => {
             <NavLink to='/pricing' className='home-book-button'>Video Call</NavLink>
         </div>
         <div className='home-right'>
-            <img className='home-right-img' src="https://res.cloudinary.com/coderanil/image/upload/v1709804588/avantika1st_ahtdms.png" alt="Avantika" />
+            <img className='home-right-img' src="https://res.cloudinary.com/coderanil/image/upload/v1710071698/473_1000_vg0wgq_copy-removebg-preview_ien1tz.png" alt="Avantika" />
         </div>
       </div>
 

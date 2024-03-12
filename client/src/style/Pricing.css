@@ -14,7 +14,12 @@
     margin-inline: 50px;
     padding: 50px 20px;
     border-radius: 20px;
-    box-shadow: 2px 2px 5px  #0000004d;
+    box-shadow: 5px 5px 5px  #0000004d;
+    background-color: white;
+    transition: all 0.2s;
+}
+.pricing-card:hover{
+    box-shadow: 5px 5px 5px  #0000007a;
 }
 .pricing-card a{
     text-decoration: none;
@@ -23,13 +28,21 @@
     text-align: center;
     font-size: 30px;
     font-weight: 700;
-    color: blue;
+    color: green;
 }
 .pricing-price{
     text-align: center;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 28px;
+    font-weight: 700;
     margin-block: 20px;
+    color: green;
+}
+.pricing-price span{
+    text-decoration: line-through;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-right: 10px;
+    color: red;
 }
 .pricing-des{
     font-weight: 700;
@@ -37,7 +50,7 @@
     opacity: 0.8;
 }
 .pricing-button{
-    background-color: #613FE5;
+    background-color: green;
     color: white;
     text-align: center;
     padding: 10px;
@@ -45,6 +58,9 @@
     transition: all .3s ease;
     cursor: pointer;
     margin-top: 30px;
+}
+.pricing-button:hover{
+    box-shadow: 1px 1px 5px #00000076;
 }
 
 /* Model */
@@ -72,7 +88,7 @@
     box-shadow: 0 0 30px 1px;
 }
 .qrcode-close{
-    color: #613FE5;
+    color: green;
     position: absolute;
     right: 0;
     top: 0;
@@ -85,7 +101,7 @@
     margin-block: 20px;
 }
 .qrcode-name > span{
-    color: #0088ff;
+    color: green;
 }
 .qrcode-card > img{
     width: 30vw;
@@ -132,9 +148,10 @@
 }
 .pricing-form button{
     padding: 8px;
-    background-color: #613FE5;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 2px 2px 4px #0000005c;
 }

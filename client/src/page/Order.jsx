@@ -5,18 +5,21 @@ import VideoCall from "./VideoCall";
 import { toast } from "react-toastify";
 import '../style/Order.css';
 import { useAuth } from "../context/AuthProvider";
-
+import {NavLink} from 'react-router-dom';
+import Loading from "../component/Loading";
 const Order = () => {
 
   const [orders, setOrders] = useState([]);
   const [videocall, setVideocall] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
   const [auth] = useAuth();
+  const [existorder, setExistorder] = useState(false);
 
   const getOrders = async () => {
     try {
       const { data } = await axios.post('/api/v1/order/getorder', {orderId:auth?.orderId});
       setOrders(data?.orders);
+      if(data?.orders?.length === 0) setExistorder(true);
     } catch (error) {
       console.log(error);
     }
@@ -24,6 +27,8 @@ const Order = () => {
   useEffect(()=>{
     if(auth?.user?._id){
       getOrders();
+    }else{
+      setExistorder(true);
     }
 },[auth])
 
@@ -44,7 +49,7 @@ const Order = () => {
     <>
       <div className="order">
         <div className="order-container">
-          {orders?.map((o)=>(
+          {orders[0] ? orders?.map((o)=>(
             <div key={o?._id} className="order-card">
               <img src={o?.payscreenshot} alt="" className="order-image" />
               <div className="order-right">
@@ -57,7 +62,13 @@ const Order = () => {
                 </div>
               </div>
             </div>
-          ))}
+          )) :
+          <>{existorder ?
+          <>
+          <div style={{marginBottom: "30px"}}>You have not booked any plane</div>
+          <NavLink to='/pricing' className="navbar-login-button">Book a plane</NavLink>
+          </>:
+          <><Loading/></>}</>}
         </div>
       </div>
       {videocall && (
