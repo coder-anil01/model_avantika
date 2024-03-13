@@ -2,9 +2,10 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {FaInstagram, FaFacebookF} from 'react-icons/fa';
 import { IoLogoWhatsapp } from "react-icons/io5";
-
 import '../style/Homepage.css';
 import Gallary from './Gallary';
+import Reviews from './Reviews';
+import {Link} from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -12,11 +13,12 @@ const Homepage = () => {
     <div className='home'>
       <div className='home-container'>
         <div className='home-left'>
-            <h1>Hi I'm Avantika</h1>
-            <h2>I'm Bold Model</h2>
+            <h1>Hi I'm Avanshika</h1>
+            <h3>Call me for Adult video call</h3>
+            <h4>Video call all features camera mic on /off</h4>
             <div className='home-media-icons-card'>
-                <div className='home-media-icons'><FaInstagram/></div>
-                <div className='home-media-icons'><IoLogoWhatsapp/></div>
+                <Link to="" className='home-media-icons'><FaInstagram/></Link>
+                <Link to='https://wa.link/idejyp' target='_blank' className='home-media-icons'><IoLogoWhatsapp/></Link>
             </div>
             <NavLink to='/pricing' className='home-book-button'>Video Call</NavLink>
         </div>
@@ -27,6 +29,7 @@ const Homepage = () => {
 
 {/* GALLARY */}
       <Gallary/>
+      <Reviews/>
     </div>
     </>
   )

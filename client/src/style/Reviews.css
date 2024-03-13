@@ -31,14 +31,10 @@
     border-radius: 5px;
     box-shadow: 0 0 5px ;
 }
-.home-reviews-card img{
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-}
 .home-reviews-name{
     margin-block: 10px;
+    font-size: 19px;
+    font-weight: 700;
 }
 .home-reviews-star{
     display: flex;
@@ -50,7 +46,7 @@
 }
 .home-reviews-message{
     height: 100px;
-    overflow: scroll;
+    overflow-y: scroll;
     margin-block: 5px;
 }
 
@@ -73,12 +69,6 @@
     }
     .home-reviews-container>*:nth-child(2n){
         display: none;
-    }
-    .home-reviews-card img{
-        height: 60px;
-        width: 60px;
-        object-fit: cover;
-        border-radius: 50%;
     }
     .home-reviews-container{
         padding: 0;

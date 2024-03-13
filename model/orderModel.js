@@ -1,15 +1,8 @@
 import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema({
-    payscreenshot:{
-        type:String,
-    },
     videourl:{
         type:String,
-    },
-    status:{
-        type: String,
-        default: 'Please Wait...',
     },
     userId:{
         type: mongoose.Schema.Types.ObjectId,

@@ -11,8 +11,7 @@ const Reviews = () => {
   const [current, setCurrent] = useState([]);
   const [currentpage, setCurrentpage] = useState(1);
 
-  const classcard = "home-reviews-card";
-  
+  const classcard = "home-reviews-card"
   const getReviews = async () => {
         try {
           const {data} = await axios.get('/api/v1/review/getpublish')
@@ -50,13 +49,12 @@ const Reviews = () => {
   return (
     <>
     {current?.[0] && <div className='home-reviews'>
-      <h1 className="about-heading">Students <span>Reviews</span></h1>
+      <h1 className="homepage-heading">Client <span>Reviews</span></h1>
         <FaAngleDoubleLeft className='reviews-arrow-left' onClick={handeleprev}/>
         <FaAngleDoubleRight className='reviews-arrow-right' onClick={handelenext}/>
       <div className="home-reviews-container">
         {current?.map((r, index)=>(
           <div className="home-reviews-card" key={index}>
-            <img src={r?.profileImg} alt="" />
             <div className='home-reviews-name'>{r?.name}</div>
             <div className='home-reviews-star'>
             {[1,1,1,1,1].map((s, index)=>(

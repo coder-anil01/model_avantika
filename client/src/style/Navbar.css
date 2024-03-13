@@ -38,3 +38,15 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+.navbar-container{
+    padding: 0 2vw;
+}
+.navbar-logo{
+    font-size: 20px;
+}
+.navbar-item{
+    padding: 17px;
+}
+}

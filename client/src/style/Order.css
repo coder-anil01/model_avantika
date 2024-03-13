@@ -1,69 +1,110 @@
 .order{
     width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
 }
 .order-container{
-    margin: auto;
+    padding: 0 5vw;
+    position: relative;
+}
+.order-girl-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.order-girl-image img{
+    height: 100%;
+    /* opacity: 0.8; */
+}
+.show-online{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+}
+.show-online-icon{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    margin-right: 10px;
+    border-radius: 50%;
+    animation: live 1s infinite ease;
+}
+.order-videocall-icon{
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    background-color: white;
+    padding: 10px 12px 5px 12px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
+}
+@keyframes live {
+    0%{box-shadow: 0 0 0 red;}
+    100%{box-shadow: 0 0 4px 2px red;}
+}
+
+.order-center-element{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+.order-not{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-.order-card{
-    width: 80vw;
-    background-color: #c4c3c3;
-    margin: 10px 0;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 20vw auto;
+.order-not p{
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0 0 5px white;
 }
-.order-image{
-    max-width: 15vw;
-}
-.order-message{}
-.order-id{
-    color: rgb(1, 67, 128);
-}
-.order-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.order-right div{
-    margin: 5px 0;
-}
-.order-payment{}
-.order-videocall-icon{
-    font-size: 40px;
-    text-align: center;
+.order-not button{
+    background-color: green;
+    border: none;
+    padding: 10px 70px;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
+.order-online-timing{
+    position: absolute;
+    top: 10px;
+}
+.order-online-timing p{
+   border-bottom: 1px solid black; 
+}
+.order-online-timing li{
+    margin-block: 10px;
+    font-weight: 700;
+}
 
 
-@media only screen and (max-width: 600px) {
-    .order-card{
-        width: 100vw;
-        padding: 10px 0;
-        grid-template-columns: 110px auto;
+@media screen and (max-width: 600px) {
+    .show-online{
+        right: 20px;
     }
-    .order-image{
-        min-width: 100px;
-    }
-    .order-message{
-        font-size: 14px;
-    }
-    .order-id{
-        color: rgb(1, 67, 128);
-        font-size: 12px;
-    }
-    .order-right div{
-        margin: 5px 0;
-    }
-    .order-payment{}
     .order-videocall-icon{
-
+        left: 42%;
+    }    
+    .order-not p{
+        font-size: 15px;
+    }
+    .order-not button{
+        font-size: 15px;
+    } 
+    .order-online-timing{
+        top: 5px;
+    }
+    .order-online-timing li{
+        font-weight: 500;
     }
 }

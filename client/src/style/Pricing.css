@@ -4,19 +4,20 @@
     flex-direction: column;
 }
 .prcing-container{
-    min-height: 55vh;
-    padding: 0 5vw;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .pricing-card{
-    margin-inline: 50px;
+    margin: 20px 2vw;
     padding: 50px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 5px 5px 5px  #0000004d;
     background-color: white;
     transition: all 0.2s;
+    width: 300px;
 }
 .pricing-card:hover{
     box-shadow: 5px 5px 5px  #0000007a;
@@ -63,95 +64,11 @@
     box-shadow: 1px 1px 5px #00000076;
 }
 
-/* Model */
-.qrcode{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    backdrop-filter: blur(5px);
-}
-.qrcode-container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.qrcode-card{
-    backdrop-filter: blur(30px);
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 30px 1px;
-}
-.qrcode-close{
-    color: green;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 35px;
-}
-.qrcode-name{
-    text-align: center;
-    margin-block: 20px;
-}
-.qrcode-name > span{
-    color: green;
-}
-.qrcode-card > img{
-    width: 30vw;
-    min-width: 300px;
-}
-.qrcode-upi-card{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 10px;
-}
-.qrcode-upiid{
-    text-align: center;
-}
-.upicopy{
-    background-color: #d5d5d5;
-}
-.qrcode-upi-card button{
-    cursor: pointer;
-}
-.pricing-image-load{
-    margin-block: 30px 10px;
-}
-
-/* Order */
-.pricing-form{
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-
-}
-.pricing-file-card{
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-.pricing-file-upload{
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-.pricing-file-card input{
-    cursor: pointer;
-}
-.pricing-form button{
-    padding: 8px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px #0000005c;
+@media screen and (max-width: 750px) {
+    .pricing-card{
+        width: 250px;
+    }
+    .pricing-des{
+        font-size: 15px;
+    }
 }
