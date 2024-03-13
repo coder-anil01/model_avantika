@@ -20,7 +20,7 @@ export const createPaymentSeccion = async(req, res) => {
             "customer_phone": "8987194176"
         },
         "order_meta": {
-            "return_url": `http://localhost:5173/checkout/${orderId}`,
+            "return_url": `https://avanshika.onrender.com/checkout/${orderId}`,
         }
     };
 
