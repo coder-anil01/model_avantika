@@ -7,24 +7,18 @@ const CheackOut = () => {
 
     const params = useParams();
     const prevOrderNo = localStorage.getItem('orderNo');
-    const orderNo = prevOrderNo || 0 ;
+    const orderNo = prevOrderNo || 0
+    const totalOrder = parseInt(orderNo);
     const navigate = useNavigate();
 
     const verifyPayment = async() => {
-        try {
-            const {data} = await axios.post('/api/v1/payment/verifying', {orderId: params?.id, orderNo});
-            if(data.success){
-              await localStorage.setItem('orderNo', data?.orderNo);
-              await localStorage.setItem('callLink', data?.callLink);
-              navigate('/order');
-            };
-        } catch (error) {
-            
-        }
+          await localStorage.setItem('orderNo', totalOrder+1);
+          await localStorage.setItem('callLink', "8789hfoewjhnfwehfr9wghf9w");
+          navigate('/order');
     }
 
     useEffect(()=>{
-        if(params?.id) verifyPayment();
+       verifyPayment();
     }, [params])
 
   return (

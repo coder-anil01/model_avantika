@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Pricing = () => {
 
-    const handlePayment = (id) => {
-        window.location.href = `https://coderanil.vercel.app/avanshika/payment/${id}`;
-    }
 
   return (
     <>
@@ -20,7 +17,9 @@ const Pricing = () => {
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration calibration</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
-                <Link><div className="pricing-button" onClick={()=>handlePayment(1)}>Book Now</div></Link>
+                <Link to='https://payments.cashfree.com/links/J6dkqog1pk40'>
+                    <div className="pricing-button">Book Now</div>
+                </Link>
             </div>
 
             <div className="pricing-card">
@@ -29,7 +28,9 @@ const Pricing = () => {
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration calibration</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
-                <Link><div className="pricing-button" onClick={()=>handlePayment(1)}>Book Now</div></Link>
+                <Link to='https://payments.cashfree.com/links/J6dkqog1pk40'>
+                    <div className="pricing-button">Book Now</div>
+                </Link>
             </div>
         </div>
     </div>
