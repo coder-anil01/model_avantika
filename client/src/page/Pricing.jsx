@@ -28,7 +28,7 @@ const Pricing = () => {
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration calibration</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
                 <div className="pricing-des"><PiCaretDoubleRightBold/> calibration Paid Pormation</div>
-                <Link to='https://payments.cashfree.com/links/J6dkqog1pk40'>
+                <Link to='https://payments-test.cashfree.com/links/b6dl5g6q4kpg'>
                     <div className="pricing-button">Book Now</div>
                 </Link>
             </div>

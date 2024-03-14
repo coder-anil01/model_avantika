@@ -25,8 +25,8 @@ const Order = () => {
   };
 
   const handleCall = () => {
+    setVideocall(true);
     if(online === "Online"){
-      setVideocall(true);
     }else{
       toast.info('Please wait for Online');
     }
