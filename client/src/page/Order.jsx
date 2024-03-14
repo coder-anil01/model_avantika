@@ -80,7 +80,7 @@ const Order = () => {
       </div>
     </div>
 
-    {videocall && <VideoCall handleSend={receiveDataFromChild} videoUrl={callLink} />}
+    {videocall && <VideoCall handleSend={receiveDataFromChild} callLink={callLink} />}
     </>
   )
 }

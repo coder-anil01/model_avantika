@@ -6,6 +6,7 @@ import Webcam from "react-webcam";
 import Callring from "../media/callring.mp3";
 
 const VideoCall = (props) => {
+
   const data = false;
   const handleSend = () => {
     props.handleSend(data);
