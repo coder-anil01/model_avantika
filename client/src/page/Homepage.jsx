@@ -15,9 +15,11 @@ const Homepage = () => {
         <div className='home-left'>
             <h1>Hi I'm Avanshika</h1>
             <h3>Call me for Adult video call</h3>
-            <h4>Video call all features camera mic on /off</h4>
+            <h4> All Body Part View</h4>
+            <h4>Safe Video Call</h4>
+            <h4>Camera On/Off Fitures Available</h4>
             <div className='home-media-icons-card'>
-                <Link to="" className='home-media-icons'><FaInstagram/></Link>
+                <Link to="https://www.instagram.com/avanshika_me" className='home-media-icons'><FaInstagram/></Link>
                 <Link to='https://wa.link/idejyp' target='_blank' className='home-media-icons'><IoLogoWhatsapp/></Link>
             </div>
             <NavLink to='/pricing' className='home-book-button'>Video Call</NavLink>
