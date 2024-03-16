@@ -1,18 +1,16 @@
 import express from "express";
-import multer from "multer";
-import { createOrder, getAllOrder, getOrder, updateOrder } from "../controller/orderController.js";
+import { createOrder, getAllOrder, getOrder } from "../controller/orderController.js";
 
 const route = express.Router();
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
 
-route.post('/create', upload.single('file'), createOrder);
+// USER
+route.post('/getOrder', getOrder);
 
-route.post('/getorder', getOrder);
+// ADMIN
+route.post('/createOrder', createOrder);
 
 route.get('/getallorder', getAllOrder);
 
-route.post('/update', updateOrder);
 
 
 export default route;

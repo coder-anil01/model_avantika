@@ -4,7 +4,10 @@ const userSchema = new mongoose.Schema({
     name:{
         type: String,
     },
-    uniq:{
+    number:{
+        type: String,
+    },
+    orderCount:{
         type: String,
     },
     role:{

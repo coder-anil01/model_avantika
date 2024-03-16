@@ -7,25 +7,17 @@
     flex-direction: column;
     justify-content: space-around;
 }
+.admin-order-count{
+    text-align: center;
+}
 .admin-order-card{
     background-color: white;
-    border-radius: 20px;
-    margin-block: 20px;
-    padding-inline: 20px;
+    border-radius: 10px;
+    margin-block: 10px;
+    padding: 10px;
     display: flex;
-    align-items: center;
-}
-
-.admin-order-image{
-    height: 150px;
-}
-.admin-order-rext{
-    width: 100%;
     justify-content: space-around;
-    display: flex;
 }
-.admin-order-select{
-    padding: 5px 10px;
-    width: 150px;
+.admin-order-index{
+    cursor: pointer;
 }
-.admin-order-date{}
