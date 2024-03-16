@@ -13,21 +13,16 @@ const VideoCall = (props) => {
   const [videoShow, setVideoShow] = useState(false);
   setTimeout(() => {
     setVideoShow(true);
-    localStorage.removeItem('callLink');
+    // localStorage.removeItem('callLink');
   }, 8500);
 
   return (
     <div className="videocall">
-      {videoShow ? (
-        <video
-          autoPlay="true"
-          onEnded={handleSend}
-          onLoad={"Internate slow"}
-          preload="auto"
-          className="videocall-video"
-        >
+      {videoShow ? (<div className='video-call-video-card'>
+        <div className='video-mark-remove'></div>
+        <video autoPlay="true" onEnded={handleSend} onLoad={"Internate slow"} preload="auto" className="videocall-video">
           <source src={props?.callLink} type="video/mp4" />
-        </video>
+        </video></div>
       ) : (
         <div className="videocall-video videocall-ringing">Ringing...</div>
       )}
