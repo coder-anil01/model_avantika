@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Pricing = () => {
 
-    let plan1Pay = "https://payments.cashfree.com/links/u6dvkbvbc040"
-    let plan2Pay = "https://payments.cashfree.com/links/K6dvkkrvm040"
+    let plan1Pay = "https://payments.cashfree.com/forms/Avanshikaonetime"
+    let plan2Pay = "https://payments.cashfree.com/forms/avanshikaonemonth"
   return (
     <>
     <div className="pricing">
