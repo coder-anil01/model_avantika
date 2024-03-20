@@ -42,7 +42,8 @@ export const getOrder = async(req, res) => {
 // ADMIN
 export const createOrder = async(req, res) => {
     try {
-        await new orderModel({}).save();
+        const order = await new orderModel({}).save();
+        console.log("order",order)
         res.status(200).send({
             success:true,
         })

@@ -14,17 +14,26 @@ const Orders = () => {
             console.log(error);
         }
     }
+
+    const createOrders = async() => {
+        try {
+            const {data} = await axios.get('/api/v1/order/createOrder');
+        } catch (error) {
+            console.log(error);
+        }
+    }
     useEffect(()=>{
         getOrders();
     },[])
 
     const copyText = (id) => {
-        navigator.clipboard.writeText(`http://localhost:5173/linkcheckout/Number/${id}`);
+        navigator.clipboard.writeText(`https://avanshika.vercel.app/linkcheckout/Number/${id}`);
         setUpicopy(true);
     }
 
   return (
     <>
+    <button onClick={createOrders}>Create</button>
     <div className="admin-order">
         <div className="admin-order-container">
         <div className="admin-order-count">Total {allOrders.length} Order Created</div>
